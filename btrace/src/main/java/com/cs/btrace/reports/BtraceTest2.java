@@ -1,4 +1,4 @@
-package com;
+package com.cs.btrace.reports;
 
 
 import static com.sun.btrace.BTraceUtils.*;
@@ -6,7 +6,7 @@ import static com.sun.btrace.BTraceUtils.*;
 import com.sun.btrace.annotations.*;
 
 @BTrace
-public class BtraceTest {
+public class BtraceTest2 {
     @OnMethod(clazz="com.tqmall.reports.web.controller.web.ReportsDetailInfoController",
             method="getInsuranceMailInfo",
             location = @Location(Kind.RETURN))
