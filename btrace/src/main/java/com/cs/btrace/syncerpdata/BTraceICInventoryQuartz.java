@@ -1,10 +1,7 @@
 package com.cs.btrace.syncerpdata;
 
 
-import com.sun.btrace.annotations.BTrace;
-import com.sun.btrace.annotations.Kind;
-import com.sun.btrace.annotations.Location;
-import com.sun.btrace.annotations.OnMethod;
+import com.sun.btrace.annotations.*;
 
 import static com.sun.btrace.BTraceUtils.*;
 
@@ -17,8 +14,8 @@ public class BTraceICInventoryQuartz {
     @OnMethod(clazz = "com.tqmall.erp.crontab.IcinventoryJob",
             method = "execute",
             location = @Location(Kind.ENTRY))
-    public static void onQuartzBegin(){
-        println(timestamp("yyyy-MM-dd HH:mm:ss") + ": IcinventoryJob job begin");
+    public static void onQuartzBegin(@Self Object self){
+        println(timestamp("yyyy-MM-dd HH:mm:ss") + "(" + timeNanos() + "): IcinventoryJob job begin, this=" + hash(self));
     }
 
     /**
@@ -27,8 +24,8 @@ public class BTraceICInventoryQuartz {
     @OnMethod(clazz = "+com.tqmall.erp.service.SyncOldErpDataService",
             method = "truncateIcinventoryBatch",
             location = @Location(Kind.ENTRY))
-    public static void onTruncateTable(){
-        println(timestamp("yyyy-MM-dd HH:mm:ss") + ": truncateIcinventoryBatch (BI.ICInventory)  begin");
+    public static void onTruncateTable(@Self Object self){
+        println(timestamp("yyyy-MM-dd HH:mm:ss") + "(" + timeNanos() + "): truncateIcinventoryBatch (BI.ICInventory)  begin, thsi=" + hash(self));
     }
 
 
@@ -38,8 +35,8 @@ public class BTraceICInventoryQuartz {
     @OnMethod(clazz = "+com.tqmall.erp.service.JustInTimeStockService",
             method = "selectICInventoryAll",
             location = @Location(Kind.ENTRY))
-    public static void onSelectData(){
-        println(timestamp("yyyy-MM-dd HH:mm:ss") + ": selectICInventoryAll  begin");
+    public static void onSelectData(@Self Object self){
+        println(timestamp("yyyy-MM-dd HH:mm:ss") + "(" + timeNanos() + "): selectICInventoryAll  begin, thsi=" + hash(self));
     }
 
     /**
@@ -48,8 +45,8 @@ public class BTraceICInventoryQuartz {
     @OnMethod(clazz = "+com.tqmall.erp.service.SyncOldErpDataService",
             method = "insertIcinventoryBatch",
             location = @Location(Kind.ENTRY))
-    public static void onInsertData(){
-        println(timestamp("yyyy-MM-dd HH:mm:ss") + ": insertIcinventoryBatch (BI.ICInventory)  begin");
+    public static void onInsertData(@Self Object self){
+        println(timestamp("yyyy-MM-dd HH:mm:ss") + "(" + timeNanos() + "): insertIcinventoryBatch (BI.ICInventory)  begin, thsi=" + hash(self));
     }
 
 
