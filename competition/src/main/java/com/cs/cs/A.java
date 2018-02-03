@@ -9,11 +9,22 @@ import java.util.List;
 
 public class A {
 
+    private Integer a;
+
+    public Integer getA() {
+        return a;
+    }
+
+    public void setA(Integer a) {
+        this.a = a;
+    }
+
     static PrintWriter out = new PrintWriter(System.out);
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws Exception{
-        System.out.println("m".equals(null));
+        A a = new A();
+        a.getA();
     }
 
     static <T> void doit(A it, A b){
