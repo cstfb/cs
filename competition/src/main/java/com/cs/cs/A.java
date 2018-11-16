@@ -24,7 +24,7 @@ public class A {
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws Exception{
-        System.out.println(Integer.valueOf("1.0"));
+        System.out.println(Integer.valueOf("1"));
     }
 
     static <T> void doit(A it, A b){
