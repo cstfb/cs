@@ -1,8 +1,7 @@
-# 简介
-```$xslt
-btrace实验
-codeforces, topcode题目代码
-....
-各种水
+CS
+============
+[![MIT](https://img.shields.io/github/license/cstfb/cs)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/cstfb/cs.svg?branch=master)](https://travis-ci.org/cstfb/cs)
 
-```
+### Overview
+//todo
