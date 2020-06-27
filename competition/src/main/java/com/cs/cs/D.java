@@ -1,14 +1,10 @@
 package com.cs.cs;
 
-import org.apache.commons.codec.binary.Base64;
-import org.apache.cxf.binding.soap.SOAPBindingUtil;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * Created by fengbo on 16/7/23.
